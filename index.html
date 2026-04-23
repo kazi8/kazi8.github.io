@@ -195,6 +195,45 @@ nav {
   color: #4da3ff; /* accent color */
   margin-left: 8px; /* small spacing between name and title */
 }
+
+
+
+.btn {
+  padding: 10px 18px;
+  background: #4da3ff;
+  color: white;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background: #111;
+  margin: 15% auto;
+  padding: 20px;
+  width: 250px;
+  border-radius: 8px;
+}
+
+.modal-content a {
+  display: block;
+  padding: 8px 0;
+  color: #4da3ff;
+  text-decoration: none;
+}
+
+.close {
+  float: right;
+  cursor: pointer;
+  color: white;
+}
     
 </style>
 </head>
@@ -221,6 +260,19 @@ nav {
     <a class="btn" href="CoverLetter.pdf" download>CoverLetter</a>  -->
     <a href="resume.pdf" target="_blank" class="btn">Resume</a>
     <a href="coverletter.pdf" target="_blank" class="btn">CoverLetter</a>
+    
+    <button class="btn" onclick="document.getElementById('pdfModal').style.display='block'">
+  Documents
+</button>
+<div id="pdfModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="document.getElementById('pdfModal').style.display='none'">&times;</span>
+    <a href="coverletter.pdf" target="_blank">Cover Letter</a>
+    <a href="resume.pdf" target="_blank">Resume</a>
+    <a href="portfolio.pdf" target="_blank">Portfolio</a>
+  </div>
+</div>
+
 
     
     <!-- Dark Mode Toggle -->
